@@ -9,12 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* VOICE work: a product manager's portfolio, read by recruiters and hiring managers in a minute
-   IDEA a central bank bulletin: ruled columns, a dated record of launches, figures set large
-   PICTURE a true-scale timeline of shipped features, talks and writing, 2024 to 2026
-   COLOUR white ground, ink #14161a, deep teal #0b5d63 for marks and figures, fine grey rules
-   TYPE Libre Caslon Text for titles and figures + Inter for text
-   LAYOUT name and summary across the top, timeline full width beneath; on a phone the timeline becomes a dated list */
 :root{color-scheme:light dark;--bg:light-dark(#ffffff,#0d1416);--ink:light-dark(#14161a,#e6ebeb);--mute:light-dark(#5a6066,#9aa6a8);--teal:light-dark(#0b5d63,#6cc1c6);--rule:light-dark(#d9dcdf,#26343a);--tint:light-dark(#eef5f5,#122126)}
 :root[data-theme=light]{color-scheme:light}
 :root[data-theme=dark]{color-scheme:dark}
@@ -92,7 +86,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
     <div class="head">
       <div>
         <h1>Murtuza Mukadam</h1>
-        <p class="role">Senior Technical Product Manager, Kubernetes &amp; AI infrastructure at IBM · Toronto</p>
+        <p class="role">Senior Technical Product Manager, IBM · Toronto</p>
         <p class="lede">I build products for SRE and platform engineers. Before product, I spent nine years as a developer and DevOps engineer running release pipelines and production Kubernetes, including at two startups. At IBM I lead GPU optimization for LLM inference and own Kubernetes and OpenShift optimization.</p>
         <div class="contact">
           <a href="mailto:murtuza.i.mukadam@gmail.com">murtuza.i.mukadam@gmail.com</a>
@@ -108,7 +102,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
     </div>
 
     <div class="tl">
-      <div class="tl-cap"><span>Launches, talks and writing, 2024 to 2026</span><span>Select a point to open it</span></div>
+      <div class="tl-cap"><span>Launches, talks, writing and case studies, 2024 to 2026</span><span>Select a point to open it</span></div>
       <div class="fig"><svg id="tl" role="img" aria-label="Timeline of launches, talks and writing from May 2024 to November 2026"></svg></div>
       <ol class="tl-list" id="tl-list"></ol>
     </div>
@@ -132,7 +126,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
             <li><a href="https://community.ibm.com/community/user/blogs/murtuza-mukadam/2024/05/22/scale-gen-ai-workloads-in-kubernetes">Scale your generative AI workloads in Kubernetes</a> (launch blog, 2024)</li>
             <li><a href="https://community.ibm.com/community/user/blogs/murtuza-mukadam/2025/06/18/mig-aware-horizontal-scaling">MIG-aware horizontal scaling for LLM workloads</a> (2025)</li>
             <li><a href="https://aws.amazon.com/blogs/ibm-redhat/optimize-gpu-workloads-on-amazon-eks-and-rosa-with-ibm-turbonomic/">Optimize GPU workloads on Amazon EKS and ROSA</a> (AWS blog, co-author, 2026)</li>
-            <li><a href="https://www.ibm.com/case-studies/ibm-bam-turbonomic">IBM case study: internal LLM platform on 100+ A100 GPUs</a></li>
+            <li><a href="https://www.ibm.com/case-studies/ibm-big-ai-models-turbonomic">Optimizing GPUs for gen AI</a> (IBM case study, 2024)</li>
+            <li><a href="https://www.ibm.com/case-studies/ibm-bam-turbonomic">IBM case study: internal LLM platform on 100+ A100 GPUs</a> (2025)</li>
           </ul>
         </div>
         <div class="result"><div class="r"><div class="fig-num">3x</div><div class="fig-lab">free GPUs in production with steady performance</div></div><div class="r"><div class="fig-num">2x</div><div class="fig-lab">GPU throughput, no added latency (IBM case study)</div></div></div>
@@ -183,7 +178,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
 
 <section class="band">
   <div class="wrap">
-    <div class="sec-head"><h2>Writing</h2><p>Launch posts and guides I wrote or co-wrote.</p></div>
+    <div class="sec-head"><h2>Writing</h2><p>Launch posts and guides I wrote or co-wrote, and the case study on my GPU work.</p></div>
     <div class="scroll">
       <table class="stack">
         <thead><tr><th>Date</th><th>Title</th><th>Published on</th></tr></thead>
@@ -227,6 +222,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
 {
 const items=[
   {d:"2024-05-22",n:"GenAI scaling launch",k:"Blog",t:"Scale your generative AI workloads running in Kubernetes to assure performance and efficiency",w:"IBM Community",u:"https://community.ibm.com/community/user/blogs/murtuza-mukadam/2024/05/22/scale-gen-ai-workloads-in-kubernetes"},
+  {d:"2024-12-09",n:"GPU case study",k:"Case study",t:"Optimizing GPUs for gen AI: saving critical resources with IBM Turbonomic",w:"IBM case study",u:"https://www.ibm.com/case-studies/ibm-big-ai-models-turbonomic"},
   {d:"2025-06-18",n:"MIG-aware scaling",k:"Blog",t:"MIG-Aware Horizontal Scaling: Turbo-Charging GenAI LLM Workloads on Kubernetes",w:"IBM Community",u:"https://community.ibm.com/community/user/blogs/murtuza-mukadam/2025/06/18/mig-aware-horizontal-scaling"},
   {d:"2025-10-30",n:"One-click updates",k:"Blog",t:"Introducing One-Click Updates for Kubeturbo and Prometurbo",w:"IBM Community",u:"https://community.ibm.com/community/user/blogs/murtuza-mukadam/2025/10/28/one-click-updates-kubeturbo-prometurbo"},
   {d:"2025-12-11",n:"In-place resizing",k:"Blog",t:"From Restarts to Real Time: In Place Pod Resizing",w:"IBM Community",u:"https://community.ibm.com/community/user/blogs/murtuza-mukadam/2025/12/10/in-place-pod-resizing"},
