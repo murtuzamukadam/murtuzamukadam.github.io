@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Murtuza Mukadam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: a product manager's portfolio, read by recruiters and hiring managers in a minute
+   IDEA a central bank bulletin: ruled columns, a dated record of launches, figures set large
+   PICTURE a true-scale timeline of shipped features, talks and writing, 2024 to 2026
+   COLOUR white ground, ink #14161a, deep teal #0b5d63 for marks and figures, fine grey rules
+   TYPE Libre Caslon Text for titles and figures + Inter for text
+   LAYOUT name and summary across the top, timeline full width beneath; on a phone the timeline becomes a dated list */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0d1416);--ink:light-dark(#14161a,#e6ebeb);--mute:light-dark(#5a6066,#9aa6a8);--teal:light-dark(#0b5d63,#6cc1c6);--rule:light-dark(#d9dcdf,#26343a);--tint:light-dark(#eef5f5,#122126)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip}
+a{color:var(--teal);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:2px}
+h1,h2,h3,.fig-num{font-family:"Libre Caslon Text",Georgia,serif;font-weight:700;letter-spacing:-.02em;line-height:1.05;margin:0}
+h1{font-size:clamp(36px,5vw,52px)}
+h2{font-size:clamp(26px,3vw,32px);margin-bottom:6px}
+h3{font-size:21px;line-height:1.2}
+p{margin:0 0 10px;max-width:68ch}
+.band{padding-block:clamp(28px,4vw,56px);padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.top{border-bottom:1px solid var(--rule)}
+.head{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px 48px;align-items:end}
+.role{font-size:19px;margin:10px 0 14px;color:var(--ink)}
+.lede{font-size:17px;color:var(--ink)}
+.contact{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px;margin-top:6px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink)}
+.facts>div{padding:12px 12px 4px 0;border-right:1px solid var(--rule)}
+.facts>div:last-child{border-right:0;padding-left:14px}
+.facts>div:nth-child(2){padding-left:14px}
+.fig-num{font-size:clamp(28px,3.4vw,40px);color:var(--teal);white-space:nowrap}
+.fig-lab{font-size:14px;color:var(--mute);line-height:1.35;margin-top:6px}
+.tl{margin-top:36px}
+.tl-cap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--mute);margin-bottom:6px}
+.fig{position:relative;height:250px}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+svg text{font-family:Inter,system-ui,sans-serif;paint-order:stroke;stroke:var(--bg);stroke-width:4px}
+.tl-list{display:none;list-style:none;padding:0;margin:0;border-top:2px solid var(--ink)}
+.tl-list li{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.tl-list time{color:var(--teal);font-weight:600;white-space:nowrap}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:12px 48px;margin-bottom:12px}
+.sec-head p{color:var(--mute);margin:0;align-self:end}
+.work{border-top:2px solid var(--ink)}
+.item{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,.9fr);gap:12px 40px;padding:26px 0;border-bottom:1px solid var(--rule)}
+.tag{font-size:14px;color:var(--mute);margin-top:8px}
+.item ul{margin:8px 0 0;padding-left:18px;font-size:15px}
+.item li{margin-bottom:4px}
+.result{border-left:1px solid var(--rule);padding-left:20px}
+.result .r+.r{margin-top:14px}
+.tint{background:var(--tint)}
+.talk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px 48px;align-items:start}
+.talk h3{font-size:clamp(22px,2.6vw,28px)}
+.meta{font-size:15px;color:var(--mute);margin:10px 0 14px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1.5px solid var(--teal);border-radius:4px;font-weight:600;text-decoration:none}
+.btn:hover{background:var(--teal);color:var(--bg)}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{text-align:left;font-weight:600;font-size:14px;color:var(--mute);padding:8px 16px 8px 0;border-bottom:2px solid var(--ink)}
+td{padding:11px 16px 11px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+td.d{white-space:nowrap;color:var(--mute);font-variant-numeric:tabular-nums}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 56px}
+.jobs{list-style:none;padding:0;margin:0;border-top:2px solid var(--ink)}
+.jobs li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.jobs span{color:var(--mute);white-space:nowrap}
+.pubs p{font-size:15px;max-width:none}
+.pubs p+p{margin-top:14px}
+footer{border-top:1px solid var(--rule);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
+@media(max-width:900px){.item{grid-template-columns:minmax(0,1fr) minmax(0,2fr)}.result{grid-column:2;border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:12px;display:flex;gap:12px 32px;flex-wrap:wrap}.result .r+.r{margin-top:0}}
+@media(max-width:760px){.head,.sec-head,.talk,.two{grid-template-columns:minmax(0,1fr)}.item{grid-template-columns:minmax(0,1fr)}.result{grid-column:auto}}
+@media(max-width:900px){.fig,.tl-cap{display:none}.tl-list{display:block}}
+@media(max-width:600px){.facts>div{padding-right:8px}.facts>div:nth-child(2),.facts>div:last-child{padding-left:8px}table{font-size:14px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--rule)}.stack td{border:0;padding:2px 0}}
+@media(prefers-reduced-motion:no-preference){.mark{transition:r .2s}.mark:hover{r:9}}
+</style>
+</head>
+<body>
+
+<header class="band top">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h1>Murtuza Mukadam</h1>
+        <p class="role">Senior Technical Product Manager, Kubernetes &amp; AI infrastructure at IBM · Toronto</p>
+        <p class="lede">I build products for SRE and platform engineers. Before product, I spent nine years as a developer and DevOps engineer running release pipelines and production Kubernetes, including at two startups. At IBM I lead GPU optimization for LLM inference and own Kubernetes and OpenShift optimization.</p>
+        <div class="contact">
+          <a href="mailto:murtuza.i.mukadam@gmail.com">murtuza.i.mukadam@gmail.com</a>
+          <a href="https://community.ibm.com/community/user/blogs/murtuza-mukadam/2024/05/22/scale-gen-ai-workloads-in-kubernetes">Writing</a>
+          <a href="https://www.youtube.com/watch?v=oG65pT98T-c">KubeCon talk</a>
+        </div>
+      </div>
+      <div class="facts" aria-label="Results from published work">
+        <div><div class="fig-num">2x</div><div class="fig-lab">GPU throughput on IBM's internal LLM platform</div></div>
+        <div><div class="fig-num">99%</div><div class="fig-lab">less time to update cluster agents</div></div>
+        <div><div class="fig-num">250</div><div class="fig-lab">people at my KubeCon 2026 talk</div></div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-cap"><span>Launches, talks and writing, 2024 to 2026</span><span>Select a point to open it</span></div>
+      <div class="fig"><svg id="tl" role="img" aria-label="Timeline of launches, talks and writing from May 2024 to November 2026"></svg></div>
+      <ol class="tl-list" id="tl-list"></ol>
+    </div>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Selected product work</h2>
+      <p>Each one started with customers who were stuck, and shipped with telemetry, docs, a launch to the field and a blog.</p>
+    </div>
+    <div class="work">
+
+      <article class="item">
+        <div><h3>GPU optimization for LLM inference</h3><div class="tag">Led from concept to GA · 2024 to 2026</div></div>
+        <div>
+          <p>Teams running LLM inference on Kubernetes were buying GPUs to stay safe on latency. I led the feature that scales inference services on latency and throughput against SLO targets, using Prometheus metrics, so the same hardware carries more traffic.</p>
+          <p>In 2025 we made scaling aware of NVIDIA Multi-Instance GPU partitions, so each slice counts as its own unit instead of a whole GPU.</p>
+          <ul>
+            <li><a href="https://community.ibm.com/community/user/blogs/murtuza-mukadam/2024/05/22/scale-gen-ai-workloads-in-kubernetes">Scale your generative AI workloads in Kubernetes</a> (launch blog, 2024)</li>
+            <li><a href="https://community.ibm.com/community/user/blogs/murtuza-mukadam/2025/06/18/mig-aware-horizontal-scaling">MIG-aware horizontal scaling for LLM workloads</a> (2025)</li>
+            <li><a href="https://aws.amazon.com/blogs/ibm-redhat/optimize-gpu-workloads-on-amazon-eks-and-rosa-with-ibm-turbonomic/">Optimize GPU workloads on Amazon EKS and ROSA</a> (AWS blog, co-author, 2026)</li>
+            <li><a href="https://www.ibm.com/case-studies/ibm-bam-turbonomic">IBM case study: internal LLM platform on 100+ A100 GPUs</a></li>
+          </ul>
+        </div>
+        <div class="result"><div class="r"><div class="fig-num">3x</div><div class="fig-lab">free GPUs in production with steady performance</div></div><div class="r"><div class="fig-num">2x</div><div class="fig-lab">GPU throughput, no added latency (IBM case study)</div></div></div>
+      </article>
+
+      <article class="item">
+        <div><h3>Guided Prometheus onboarding</h3><div class="tag">Onboarding revamp · 2026</div></div>
+        <div>
+          <p>Connecting an existing Prometheus server and mapping GPU and LLM metrics was a project in itself. I worked with design on a guided setup flow that finds the right metrics and maps them for the customer, with the authentication options enterprises asked for.</p>
+          <ul><li><a href="https://community.ibm.com/community/user/blogs/murtuza-mukadam/2026/05/22/accelerating-gpu-optimization-in-ibm-turbonomic">Accelerating GPU optimization with streamlined Prometheus onboarding</a></li></ul>
+        </div>
+        <div class="result"><div class="r"><div class="fig-num">Weeks to minutes</div><div class="fig-lab">setup time for metric onboarding</div></div></div>
+      </article>
+
+      <article class="item">
+        <div><h3>In-place pod resizing</h3><div class="tag">Kubernetes 1.33 support · 2025</div></div>
+        <div>
+          <p>Rightsizing used to restart pods, which made teams nervous about automating it. Once Kubernetes allowed it, we changed CPU and memory on running pods, and fell back to the old path only when Kubernetes rules or policies required it.</p>
+          <ul><li><a href="https://community.ibm.com/community/user/blogs/murtuza-mukadam/2025/12/10/in-place-pod-resizing">From restarts to real time: in-place pod resizing</a></li></ul>
+        </div>
+        <div class="result"><div class="r"><div class="fig-num">No restart</div><div class="fig-lab">when the cluster supports in-place resize</div></div></div>
+      </article>
+
+      <article class="item">
+        <div><h3>One-click agent updates</h3><div class="tag">Operations at scale · 2025</div></div>
+        <div>
+          <p>Customers updated the cluster agents by hand, one cluster at a time. Now they select targets in the UI, or run a script on a schedule, and every selected cluster updates in parallel.</p>
+          <ul><li><a href="https://community.ibm.com/community/user/blogs/murtuza-mukadam/2025/10/28/one-click-updates-kubeturbo-prometurbo">Introducing one-click updates for Kubeturbo and Prometurbo</a></li></ul>
+        </div>
+        <div class="result"><div class="r"><div class="fig-num">99%</div><div class="fig-lab">less update time: 32+ hours for 100 clusters down to about 30 seconds</div></div></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap talk">
+    <div><h2>Speaking</h2><p class="meta">KubeCon + CloudNativeCon North America 2026, Salt Lake City</p></div>
+    <div>
+      <h3>Signals to System Intelligence: How Platform Teams Move from Observability to Intelligent Operations</h3>
+      <p class="meta">Platform Engineering Day · audience of 250 · published by CNCF</p>
+      <p>How platform teams can bring observability, risk, performance and cost data into one operational view, and where agentic operations reduce the load on the people who keep systems running.</p>
+      <a class="btn" href="https://www.youtube.com/watch?v=oG65pT98T-c">Watch the talk</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head"><h2>Writing</h2><p>Launch posts and guides I wrote or co-wrote.</p></div>
+    <div class="scroll">
+      <table class="stack">
+        <thead><tr><th>Date</th><th>Title</th><th>Published on</th></tr></thead>
+        <tbody id="writing"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band" style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2>Before product</h2>
+      <p class="meta">Nine years as a developer and DevOps engineer</p>
+      <ul class="jobs">
+        <li>Plooto, Senior DevOps Engineer <span>2023</span></li>
+        <li>Airin, Principal Cloud Engineer <span>2022 to 2023</span></li>
+        <li>Openlane, Senior DevOps Engineer: 100+ apps moved to Kubernetes <span>2019 to 2022</span></li>
+        <li>Loblaw Digital, release engineering lead <span>2018 to 2019</span></li>
+        <li>Scotiabank, DevOps Engineer <span>2017 to 2018</span></li>
+        <li>Ericsson, Software Developer <span>2014 to 2017</span></li>
+      </ul>
+    </div>
+    <div class="pubs">
+      <h2>Research</h2>
+      <p class="meta">MSc Computer Science, Concordia University, GPA 4.0</p>
+      <p><a href="http://spectrum.library.concordia.ca/978570/">git-review: A Distributed Peer Review Tool</a><br>Master's thesis, 2014. A lightweight, distributed code review tool built with Perl, Ruby and the Git API.</p>
+      <p><a href="http://dl.acm.org/citation.cfm?id=2487095">Gerrit Software Code Review Data from Android</a><br>Murtuza Mukadam, Christian Bird and Peter C. Rigby. 10th Working Conference on Mining Software Repositories, IEEE, 2013.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="band">
+  <div class="wrap">
+    <span>Murtuza Mukadam · Toronto, ON</span>
+    <a href="mailto:murtuza.i.mukadam@gmail.com">murtuza.i.mukadam@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+{
+const items=[
+  {d:"2024-05-22",n:"GenAI scaling launch",k:"Blog",t:"Scale your generative AI workloads running in Kubernetes to assure performance and efficiency",w:"IBM Community",u:"https://community.ibm.com/community/user/blogs/murtuza-mukadam/2024/05/22/scale-gen-ai-workloads-in-kubernetes"},
+  {d:"2025-06-18",n:"MIG-aware scaling",k:"Blog",t:"MIG-Aware Horizontal Scaling: Turbo-Charging GenAI LLM Workloads on Kubernetes",w:"IBM Community",u:"https://community.ibm.com/community/user/blogs/murtuza-mukadam/2025/06/18/mig-aware-horizontal-scaling"},
+  {d:"2025-10-30",n:"One-click updates",k:"Blog",t:"Introducing One-Click Updates for Kubeturbo and Prometurbo",w:"IBM Community",u:"https://community.ibm.com/community/user/blogs/murtuza-mukadam/2025/10/28/one-click-updates-kubeturbo-prometurbo"},
+  {d:"2025-12-11",n:"In-place resizing",k:"Blog",t:"From Restarts to Real Time: In Place Pod Resizing",w:"IBM Community",u:"https://community.ibm.com/community/user/blogs/murtuza-mukadam/2025/12/10/in-place-pod-resizing"},
+  {d:"2026-05-11",n:"OpenShift at scale",k:"Blog",t:"From optimization to autonomy: Red Hat and IBM Turbonomic in action",w:"IBM product blog",u:"https://www.ibm.com/new/product-blog/from-optimization-to-autonomy-red-hat-and-ibm-turbonomic-in-action"},
+  {d:"2026-05-22",n:"Prometheus onboarding",k:"Blog",t:"Accelerating GPU Optimization with Streamlined Prometheus Onboarding",w:"IBM Community",u:"https://community.ibm.com/community/user/blogs/murtuza-mukadam/2026/05/22/accelerating-gpu-optimization-in-ibm-turbonomic"},
+  {d:"2026-08-19",n:"AWS GPU guide",k:"Co-author",t:"Optimize GPU workloads on Amazon EKS and ROSA",w:"AWS blog",u:"https://aws.amazon.com/blogs/ibm-redhat/optimize-gpu-workloads-on-amazon-eks-and-rosa-with-ibm-turbonomic/"},
+  {d:"2026-11-19",n:"KubeCon talk",k:"Talk",t:"Signals to System Intelligence: How Platform Teams Move from Observability to Intelligent Operations",w:"CNCF, YouTube",u:"https://www.youtube.com/watch?v=oG65pT98T-c"}
+];
+const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const fmt=s=>{const [y,m,d]=s.split("-");return MON[+m-1]+" "+(+d)+", "+y};
+const short=s=>{const [y,m]=s.split("-");return MON[+m-1]+" "+y};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+document.getElementById("writing").innerHTML=items.slice().reverse().map(i=>`<tr><td class="d" data-l="Date">${fmt(i.d)}</td><td data-l="Title"><a href="${esc(i.u)}">${esc(i.t)}</a></td><td data-l="Published on">${esc(i.w)}</td></tr>`).join("");
+document.getElementById("tl-list").innerHTML=items.slice().reverse().map(i=>`<li><time>${short(i.d)}</time><a href="${esc(i.u)}">${esc(i.n)}</a></li>`).join("");
+
+const s=document.getElementById("tl");
+const t0=Date.parse("2024-01-01"),t1=Date.parse("2027-01-01");
+const draw=()=>{
+  const W=s.clientWidth,H=s.clientHeight;if(!W)return;
+  const L=8,R=8,axis=H-34,x=t=>L+(t-t0)/(t1-t0)*(W-L-R);
+  let g="",lab="";
+  for(const y of [2024,2025,2026]){
+    const a=x(Date.parse(y+"-01-01")),b=x(Date.parse((y+1)+"-01-01"));
+    g+=`<rect x="${a}" y="${axis-2}" width="${b-a-2}" height="4" fill="var(--rule)"/>`;
+    g+=`<text x="${a}" y="${axis+24}" font-size="14" fill="var(--mute)">${y}</text>`;
+  }
+  const used=[[],[],[],[]];
+  items.forEach((i,k)=>{
+    const px=x(Date.parse(i.d)),wd=Math.max(i.n.length*8.6,(short(i.d)+" · "+i.k).length*7)+14;
+    const anchor=px+wd>W-4?"end":"start",x0=anchor==="end"?px-wd:px,x1=anchor==="end"?px:px+wd;
+    let lane=used.findIndex(u=>u.every(([a,b])=>x1<a||x0>b));if(lane<0)lane=3;
+    used[lane].push([x0-6,x1+6]);
+    const ly=18+lane*50,tx=anchor==="end"?px-8:px+8;
+    g+=`<line x1="${px}" y1="${ly-6}" x2="${px}" y2="${axis}" stroke="var(--teal)" stroke-width="1"/>`;
+    g+=`<a href="${esc(i.u)}"><circle class="mark" cx="${px}" cy="${axis}" r="6" fill="var(--teal)"/></a>`;
+    lab+=`<a href="${esc(i.u)}"><text x="${tx}" y="${ly+4}" font-size="15" font-weight="600" fill="var(--ink)" text-anchor="${anchor}">${esc(i.n)}</text>`;
+    lab+=`<text x="${tx}" y="${ly+22}" font-size="13" fill="var(--mute)" text-anchor="${anchor}">${short(i.d)} · ${esc(i.k)}</text></a>`;
+  });
+  s.innerHTML=g+lab;
+};
+const ro=new ResizeObserver(draw);ro.observe(s);
+}
+</script>
+</body>
+</html>
